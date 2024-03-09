@@ -28,6 +28,12 @@
             transform: scale(1.03);
             box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
         }
+        .button-align{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -45,7 +51,7 @@
 
         <?php
         // Establish database connection
-        $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758296', 'MAHkWClFt4KkT', 'if0_35758296_discoverdash');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'discoverdash');
         // Query to select all destinations
         $query = 'SELECT * FROM destination';
         // Execute the query
@@ -83,6 +89,13 @@
             </div>';
         }
         echo '</div>'; // Close the grid layout
+        // Button to add more attractions
+        echo'
+        <div class=button-align>
+        <form method="GET" action="newdestination.php">
+        <button type="submit" name="addDestination" class="btn btn-dark add-more">Add More</button>
+        </form>
+        </div>';
         ?>
     </div> <!-- Close the main container -->
 </body>

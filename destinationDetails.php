@@ -17,6 +17,12 @@
             font-size: 12px;
             margin-top: -5px;
         }
+        .container{
+            margin: 20px;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
         .banner {
             margin: 0px;
             background-color: black;
@@ -77,8 +83,8 @@
     if((isset($_GET['details']))||(isset($_GET['DestinationID']))){
         $destinationID = $_GET['DestinationID'];
         // Establish database connection
-        //$connect = mysqli_connect('localhost', 'root', 'root', 'discoverdash');
-        $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758296', 'MAHkWClFt4KkT', 'if0_35758296_discoverdash');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'discoverdash');
+        // $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758296', 'MAHkWClFt4KkT', 'if0_35758296_discoverdash');
         // Query to retrieve destination details
         $destinationQuery = "SELECT City, Country, Climate, BestTimeToVisit, Description
                             FROM destination 

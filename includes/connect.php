@@ -1,6 +1,6 @@
 <?php
 // Establishing connection to the database
-$connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758296', 'MAHkWClFt4KkT', 'if0_35758296_discoverdash');
+$connect = mysqli_connect('localhost', 'root', 'root', 'discoverdash');
 
 // Checking if connection is successful
 if (!$connect) {

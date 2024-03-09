@@ -49,7 +49,7 @@
         <!-- PHP code to fetch attractions from the database -->
         <?php
         // Establish database connection
-        $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758296', 'MAHkWClFt4KkT', 'if0_35758296_discoverdash');
+        $connect = mysqli_connect('localhost', 'root', 'root', 'discoverdash');
         // Query to select all attractions
         $query = 'SELECT * FROM attractions';
         // Execute the query
