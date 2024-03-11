@@ -20,6 +20,7 @@
         // Include navigation
         include('reusables/nav.php');
         // Check if user has logged in, if not logged in, redirect to home page
+        include('includes/config.php');
         include('includes/functions.php');
         secure();
         // Check if addAttractions is set in the URL

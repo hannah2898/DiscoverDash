@@ -4,6 +4,12 @@ include('../includes/connect.php');
 include('../includes/config.php');
 include('../includes/functions.php');
 
+// If session id is set, redirect to admin profile page
+if (isset($_SESSION['id'])) {
+  header('Location: user.php');
+  die();
+}
+
 if (isset($_POST['email'])) {
 
   $query = 'SELECT *

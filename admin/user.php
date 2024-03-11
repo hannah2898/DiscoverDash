@@ -4,7 +4,6 @@ include('../includes/config.php');
 include('../includes/functions.php');
 secure();
 // Query the database for the user details using user id from sessio
-echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 $query = 'SELECT * FROM users WHERE id = ' . $_SESSION['id'];
 // try catch the query
 try {
