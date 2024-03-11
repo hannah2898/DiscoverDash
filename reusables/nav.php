@@ -19,6 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./attractions.php">Attractions</a>
                 </li>
+                <a class="nav-link" href="/admin/index.php">Admin Login</a>
             </ul>
         </div>
     </div>
