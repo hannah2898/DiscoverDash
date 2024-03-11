@@ -20,7 +20,7 @@ if (isset($_POST['email'])) {
     $_SESSION['id'] = $record['id'];
     $_SESSION['email'] = $record['email'];
 
-    header('Location: users.php');
+    header('Location: user.php');
     die();
 
   } else {
