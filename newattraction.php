@@ -16,21 +16,25 @@
                 <h1 class="display-5 mt-4 mb-4">Add Attraction</h1>
             </div>
         </div>
-        <?php 
-            // Include navigation
-            include('reusables/nav.php'); 
-            // Check if addAttractions is set in the URL
-            if(isset($_GET['addAttractions'])){
-                // Get the destinationID from the URL
-                $destinationID = $_GET['DestinationID'];
-            }
-            // Display the form
-            echo'
+        <?php
+        // Include navigation
+        include('reusables/nav.php');
+        // Check if user has logged in, if not logged in, redirect to home page
+        include('includes/config.php');
+        include('includes/functions.php');
+        secure();
+        // Check if addAttractions is set in the URL
+        if (isset($_GET['addAttractions'])) {
+            // Get the destinationID from the URL
+            $destinationID = $_GET['DestinationID'];
+        }
+        // Display the form
+        echo '
         <div class="container">
             <div class="row">
                 <form action="includes/addAttractions.php" method="POST">
                     <!-- Hidden input field to store the destinationID -->
-                    <input type = "hidden" name = "DestinationID" value = "'.$destinationID. '">
+                    <input type = "hidden" name = "DestinationID" value = "' . $destinationID . '">
                     <div class="mb-3">
                         <label for="Name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="Name" name="Name" aria-describedby="Name">
@@ -65,7 +69,7 @@
                 </form>
             </div>
         </div>
-        ';?>
+        '; ?>
     </div>
 </body>
 

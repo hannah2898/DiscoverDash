@@ -16,16 +16,20 @@
                 <h1 class="display-5 mt-4 mb-4">Add Destination</h1>
             </div>
         </div>
-        <?php 
-            // Include navigation
-            include('reusables/nav.php'); 
-            // Check if addDestination is set in the URL
-            // if(isset($_GET['addDestination'])){
-            //     // Get the destinationID from the URL
-            //     $destinationID = $_GET['DestinationID'];
-            // }
-            // Display the form
-            echo'
+        <?php
+        // Include navigation
+        include('reusables/nav.php');
+        // Check if user has logged in, if not logged in, redirect to home page
+        include('includes/config.php');
+        include('includes/functions.php');
+        secure();
+        // Check if addDestination is set in the URL
+        // if(isset($_GET['addDestination'])){
+        //     // Get the destinationID from the URL
+        //     $destinationID = $_GET['DestinationID'];
+        // }
+        // Display the form
+        echo '
         <div class="container">
             <div class="row">
                 <form action="includes/addDestination.php" method="POST">
@@ -63,7 +67,7 @@
                 </form>
             </div>
         </div>
-        ';?>
+        '; ?>
     </div>
 </body>
 
