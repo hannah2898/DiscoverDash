@@ -28,11 +28,11 @@
             transform: scale(1.03);
             box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
         }
-        .button-align{
+        
+        .buttons{
             display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            justify-content: space-around;
+
         }
     </style>
 </head>
@@ -78,12 +78,22 @@
                         <!-- Destination description -->
                         <p class="card-text">' . $destination['Description'] . '</p>
                         <!-- Form to view more details -->
+                        <div class="buttons">
+                        <div class="viewmore">
                         <form method="GET" action="destinationDetails.php">
                             <!-- Hidden input field to pass DestinationID -->
                             <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
                             <!-- Button to submit the form -->
                             <button type="submit" name="details" class="btn btn-dark">View More</button>
                         </form>
+                        </div>
+                        <div class="deleteBtn">
+                        <form method="GET" action="deleteDestination.php">
+                            <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
+                            <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                        </form>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>';

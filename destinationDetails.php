@@ -68,6 +68,11 @@
             align-self: center;
             gap: 50px;
         }
+        .location{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+        }
         .card:hover {
             transform: scale(1.03);
             box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
@@ -104,7 +109,9 @@
                 <div class="col">
                     <h1 class="display-5 mt-4 mb-4 banner">Destination: '.$city.', '.$country.'</h1>
                     <div class="container location">
-                        <p class="description">'.$Description.'</p>
+                        <div>
+                            <p class="description">'.$Description.'</p>
+                            </div>
                         <div class="details">
                             <h5>Current climate:</h5> 
                             <p>'.$Climate.'</p>
@@ -144,7 +151,14 @@
                                     <p class="card-text">' . $result['Description'] . '</p>
                                     <p class="card-text"><strong>Opening Hours:</strong> ' . $result['OpeningHours'] . '</p>
                                     <p class="card-text"><strong>Admission Fee:</strong> $' . $result['AdmissionFee'] . '</p>
+                                    <div class="deleteBtn">
+                                        <form method="GET" action="deleteAttraction.php">
+                                            <input type = "hidden" name = "AttractionID" value = "' . $result['AttractionID'] . '">
+                                            <button type="submit" name="deleteAttraction" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>';

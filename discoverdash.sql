@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 26, 2024 at 03:02 AM
+-- Generation Time: Mar 13, 2024 at 12:38 AM
 -- Server version: 5.7.24
 -- PHP Version: 8.1.0
 
@@ -44,7 +44,6 @@ CREATE TABLE `attractions` (
 
 INSERT INTO `attractions` (`AttractionID`, `DestinationID`, `Name`, `Description`, `Location`, `OpeningHours`, `AdmissionFee`, `ImageURL`) VALUES
 (21, 1, 'Eiffel Tower', 'Iconic wrought-iron lattice tower offering sweeping views of Paris from its observation decks.', 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 'Everyday 9:00 AM - 11:45 PM', '25.00', 'https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D'),
-(22, 2, 'Tokyo Tower', 'Landmark tower in the Shiba-Koen district of Minato, Tokyo, Japan.', '4 Chome-2-8 Shibakoen, Minato City, Tokyo 105-0011, Japan', 'Everyday 9:00 AM - 11:00 PM', '10.00', 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dG9reW8lMjB0b3dlcnxlbnwwfHwwfHx8MA%3D%3D'),
 (23, 3, 'Colosseum', 'Iconic ancient amphitheater known for gladiator contests, located in the center of Rome.', 'Piazza del Colosseo, 1, 00184 Roma RM, Italy', 'Everyday 8:30 AM - 7:15 PM', '20.00', 'https://images.unsplash.com/photo-1612986023929-569221d13721?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29sbG9zZXVtfGVufDB8fDB8fHww'),
 (24, 4, 'Statue of Liberty', 'Iconic statue on Liberty Island in New York Harbor, symbolizing freedom and democracy.', 'New York, NY 10004, United States', 'Everyday 9:30 AM - 5:00 PM', '18.00', 'https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0YXR1ZSUyMG9mJTIwbGliZXJ0eXxlbnwwfHwwfHx8MA%3D%3D'),
 (25, 5, 'Sydney Opera House', 'Iconic performing arts center featuring multiple venues and distinctive sail-like architecture.', 'Bennelong Point, Sydney NSW 2000, Australia', 'Varies by event', '30.00', 'https://images.unsplash.com/photo-1590716209211-ea74d5f63573?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHN5ZG5leSUyMG9wZXJhJTIwaG91c2V8ZW58MHx8MHx8fDA%3D'),
@@ -53,14 +52,10 @@ INSERT INTO `attractions` (`AttractionID`, `DestinationID`, `Name`, `Description
 (28, 8, 'Tower of London', 'Historic castle and former royal residence in London, housing the Crown Jewels and serving as a prison.', 'St Katharine\'s & Wapping, London EC3N 4AB, United Kingdom', 'Everyday 9:00 AM - 5:30 PM', '30.00', 'https://images.unsplash.com/photo-1558361143-c3871caca80b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG93ZXIlMjBvZiUyMGxvbmRvbnxlbnwwfHwwfHx8MA%3D%3D'),
 (29, 9, 'Grand Palace', 'Magnificent complex of buildings in Bangkok, Thailand, serving as the official residence of the Kings of Siam since the 18th century.', 'Na Phra Lan Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand', 'Everyday 8:30 AM - 3:30 PM', '20.00', 'https://images.unsplash.com/photo-1593406546920-3bbaf7e8598e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdyYW5kJTIwcGFsYWNlfGVufDB8fDB8fHww'),
 (30, 10, 'Burj Khalifa', 'Iconic skyscraper in Dubai, United Arab Emirates, currently the tallest building in the world.', '1 Sheikh Mohammed bin Rashid Blvd - Downtown Dubai - Dubai - United Arab Emirates', 'Everyday 8:30 AM - 11:00 PM', '35.00', 'https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZHViYWl8ZW58MHx8MHx8fDA%3D'),
-(31, 1, 'Louvre Museum', 'World-renowned art museum located in Paris, housing thousands of works including the Mona Lisa and Venus de Milo.', 'Rue de Rivoli, 75001 Paris, France', 'Monday, Thursday, Saturday, Sunday: 9:00 AM - 6:00 PM; Wednesday, Friday: 9:00 AM - 9:45 PM', '15.00', 'https://images.unsplash.com/photo-1586168078184-1fe44f2491e1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG91dnJlfGVufDB8fDB8fHww'),
 (32, 2, 'Mount Fuji', 'Iconic volcano and Japan\'s highest peak, offering breathtaking views and popular climbing routes.', 'Mount Fuji, Kitayama, Fujinomiya, Shizuoka 418-0112, Japan', 'Varies by season', '0.00', 'https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vdW50JTIwZnVqaXxlbnwwfHwwfHx8MA%3D%3D'),
 (33, 3, 'Venice Canals', 'Famous network of picturesque canals and bridges in Venice, Italy, offering romantic gondola rides and stunning views.', 'Venice, Metropolitan City of Venice, Italy', 'Varies by gondolier', '80.00', 'https://images.unsplash.com/photo-1558958546-8aed9fd068c4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dmVuaWNlJTIwY2FuYWx8ZW58MHx8MHx8fDA%3D'),
-(34, 4, 'Central Park', 'Expansive urban park in the heart of Manhattan, New York City, offering recreational activities, scenic landscapes, and cultural attractions.', 'New York, NY 10024, United States', 'Everyday 6:00 AM - 1:00 AM', '0.00', 'https://plus.unsplash.com/premium_photo-1682116752956-c880046f5361?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2VudHJhbCUyMHBhcmt8ZW58MHx8MHx8fDA%3D'),
 (35, 5, 'Great Barrier Reef', 'World\'s largest coral reef system off the coast of Queensland, Australia, offering unparalleled opportunities for snorkeling, diving, and marine exploration.', 'Queensland, Australia', 'Varies by operator', '50.00', 'https://images.unsplash.com/photo-1580019542155-247062e19ce4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlYXQlMjBiYXJyaWVyJTIwcmVlZnxlbnwwfHwwfHx8MA%3D%3D'),
-(37, 10, 'Desert Safari', 'Experience the thrill of dune bashing, camel riding, quad biking, and traditional Arabian entertainment in the desert.', 'Lahbab Desert (Red Dunes): Located approximately 50 kilometers southeast of Dubai city', '3:00 PM to 4:00 PM', '80.00', 'https://images.unsplash.com/photo-1624062999726-083e5268525d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D'),
-(38, 8, 'London Eye', 'Experience stunning views of London from the iconic London Eye.', 'London', '9:00 AM - 9:00 PM', '30.00', 'https://images.unsplash.com/photo-1587659901518-7020d4413085?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9uZG9uJTIwZXllfGVufDB8fDB8fHww'),
-(39, 1, 'Palace of Versailles', ' Explore the opulent Palace of Versailles, a UNESCO World Heritage site, known for its stunning architecture, lavish gardens, and rich history as the former royal residence of France.', 'Versailles, France', '9:00 AM - 6:00 PM', '18.00', 'https://images.unsplash.com/photo-1591828353335-197466da2a4e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGFsYWNlJTIwb2YlMjBWZXJzYWlsbGVzfGVufDB8fDB8fHww');
+(38, 8, 'London Eye', 'Experience stunning views of London from the iconic London Eye.', 'London', '9:00 AM - 9:00 PM', '30.00', 'https://images.unsplash.com/photo-1587659901518-7020d4413085?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9uZG9uJTIwZXllfGVufDB8fDB8fHww');
 
 -- --------------------------------------------------------
 
@@ -94,6 +89,27 @@ INSERT INTO `destination` (`DestinationID`, `City`, `Country`, `Description`, `C
 (9, 'Bangkok', 'Thailand', 'City of Angels boasting ornate temples, bustling street markets, and vibrant nightlife.', 'Tropical savanna climate', 'Year-round', 'https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGhhaWxhbmR8ZW58MHx8MHx8fDA%3D'),
 (10, 'Dubai', 'United Arab Emirates', 'Ultra-modern city known for its futuristic architecture, luxury shopping, and extravagant attractions like the Burj Khalifa.', 'Desert climate', 'Winter months', 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `first` varchar(100) NOT NULL,
+  `last` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first`, `last`, `email`, `password`) VALUES
+(1, 'Test', 'Lname', 'test@123.com', '8b1a9953c4611296a827abf8c47804d7');
+
 --
 -- Indexes for dumped tables
 --
@@ -112,6 +128,13 @@ ALTER TABLE `destination`
   ADD PRIMARY KEY (`DestinationID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -119,13 +142,19 @@ ALTER TABLE `destination`
 -- AUTO_INCREMENT for table `attractions`
 --
 ALTER TABLE `attractions`
-  MODIFY `AttractionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `AttractionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `destination`
 --
 ALTER TABLE `destination`
-  MODIFY `DestinationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `DestinationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -135,18 +164,9 @@ ALTER TABLE `destination`
 -- Constraints for table `attractions`
 --
 ALTER TABLE `attractions`
-  ADD CONSTRAINT `fk_destination` FOREIGN KEY (`DestinationID`) REFERENCES `destination` (`DestinationID`);
+  ADD CONSTRAINT `fk_destination` FOREIGN KEY (`DestinationID`) REFERENCES `destination` (`DestinationID`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
--- Create User Table
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `first` varchar(100) NOT NULL,
-  `last` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL UNIQUE,
-  `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;

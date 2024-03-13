@@ -74,6 +74,13 @@
                         <p class="card-text"><strong>Opening Hours:</strong> ' . $attraction['OpeningHours'] . '</p>
                         <p class="card-text"><strong>Admission Fee:</strong> $' . $attraction['AdmissionFee'] . '</p>
                     </div>
+                   
+                    <div class="deleteBtn">
+                        <form method="GET" action="deleteAttraction.php">
+                            <input type = "hidden" name = "AttractionID" value = "' . $attraction['AttractionID'] . '">
+                            <button type="submit" name="deleteAttraction" class="btn btn-danger">Delete</button>
+                        </form>
+                        </div>
                 </div>
             </div>';
         }
