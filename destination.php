@@ -17,19 +17,21 @@
             font-size: 12px;
             margin-top: -5px;
         }
+
         .card {
             border-radius: 4px;
             background: #fff;
-            box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-            transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
             cursor: pointer;
         }
+
         .card:hover {
             transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
         }
-        
-        .buttons{
+
+        .buttons {
             display: flex;
             justify-content: space-around;
 
@@ -39,7 +41,7 @@
 
 <body>
     <!-- Include navigation bar -->
-    <?php include('reusables/nav.php') ?>
+    <?php include ('reusables/nav.php') ?>
     <!-- Main container -->
     <div class="container">
         <!-- Page header -->
@@ -59,9 +61,9 @@
 
         // Check for database connection errors
         if (mysqli_connect_error()) {
-            die("Connection error: " . mysqli_connect_error());
+            die ("Connection error: " . mysqli_connect_error());
         }
-        
+
         // Display destinations in a grid layout
         echo '<div class="row row-cols-1 row-cols-md-2 g-4">';
         foreach ($destinations as $destination) {
@@ -92,6 +94,12 @@
                             <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
                             <button type="submit" name="delete" class="btn btn-danger">Delete</button>
                         </form>
+                        <form method="GET" action="editDestination.php">
+                        <!-- Hidden input field to pass DestinationID -->
+                        <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
+                        <!-- Button to submit the form -->
+                        <button type="submit" name="updateDestination" class="btn btn-primary">Update</button>
+                        </form>
                         </div>
                         </div>
                     </div>
@@ -100,7 +108,7 @@
         }
         echo '</div>'; // Close the grid layout
         // Button to add more attractions
-        echo'
+        echo '
         <div class=button-align>
         <form method="GET" action="newdestination.php">
         <button type="submit" name="addDestination" class="btn btn-dark add-more">Add More</button>

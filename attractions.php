@@ -17,27 +17,32 @@
             font-size: 12px;
             margin-top: -5px;
         }
+
         .card {
             border-radius: 4px;
             background: #fff;
-            box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-            transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
             cursor: pointer;
         }
+
         .img-sizing {
-            height: 200px; /* Set the height of the images */
-            object-fit: cover; /* Ensure the entire image is visible within the card */
+            height: 200px;
+            /* Set the height of the images */
+            object-fit: cover;
+            /* Ensure the entire image is visible within the card */
         }
+
         .card:hover {
             transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
         }
     </style>
 </head>
 
 <body>
     <!-- Include navigation bar -->
-    <?php include('reusables/nav.php') ?>
+    <?php include ('reusables/nav.php') ?>
     <!-- Main container -->
     <div class="container">
         <!-- Page header -->
@@ -57,9 +62,9 @@
 
         // Check for database connection errors
         if (mysqli_connect_error()) {
-            die("Connection error: " . mysqli_connect_error());
+            die ("Connection error: " . mysqli_connect_error());
         }
-        
+
         // Display attractions in a grid layout
         echo '<div class="row row-cols-1 row-cols-md-3 g-4">';
         foreach ($attractions as $attraction) {
@@ -80,7 +85,16 @@
                             <input type = "hidden" name = "AttractionID" value = "' . $attraction['AttractionID'] . '">
                             <button type="submit" name="deleteAttraction" class="btn btn-danger">Delete</button>
                         </form>
-                        </div>
+                    </div>
+                    <div class="card footer">
+                       <form method="GET" action="editAttraction.php">
+                          <!-- Hidden input field to pass DestinationID -->
+                          <input type = "hidden" name = "AttractionID" value = "' . $attraction['AttractionID'] . '">
+                          <input type = "hidden" name = "DestinationID" value = "' . $attraction['DestinationID'] . '">
+                          <!-- Button to submit the form -->
+                          <button type="submit" name="updateAttraction" class="btn btn-primary">Update</button>
+                       </form>
+                    </div>
                 </div>
             </div>';
         }
