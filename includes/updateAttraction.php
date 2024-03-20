@@ -19,7 +19,7 @@ if (isset ($_POST['updateAttraction'])) {
 
     $attraction = mysqli_query($connect, $query);
     if ($attraction) {
-        header("Location: ../destinationDetails.php?DestinationID=" . $DestinationID);
+        header("Location: ../admin/attractions.php");
     } else {
         echo "Error" . mysqli_error($connect);
     }

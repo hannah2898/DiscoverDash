@@ -1,16 +1,16 @@
 <?php
 // log in page for admin
-include('../includes/connect.php');
-include('../includes/config.php');
-include('../includes/functions.php');
+include ('../includes/connect.php');
+include ('../includes/config.php');
+include ('../includes/functions.php');
 
 // If session id is set, redirect to admin profile page
-if (isset($_SESSION['id'])) {
-  header('Location: user.php');
+if (isset ($_SESSION['id'])) {
+  header('Location: dashboard.php');
   die();
 }
 
-if (isset($_POST['email'])) {
+if (isset ($_POST['email'])) {
 
   $query = 'SELECT *
     FROM users
@@ -26,7 +26,7 @@ if (isset($_POST['email'])) {
     $_SESSION['id'] = $record['id'];
     $_SESSION['email'] = $record['email'];
 
-    header('Location: user.php');
+    header('Location: dashboard.php');
     die();
 
   } else {
@@ -53,7 +53,7 @@ if (isset($_POST['email'])) {
 </head>
 
 <body>
-  <?php include('../reusables/nav.php'); ?>
+  <?php include ('../reusables/nav.php'); ?>
   <div class="container">
     <?php echo get_message(); ?>
     <h1 class="text-center my-4">Admin Log in</h1>

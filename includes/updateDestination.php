@@ -18,7 +18,7 @@ if (isset ($_POST['updateDestination'])) {
 
     $destination = mysqli_query($connect, $query);
     if ($destination) {
-        header("Location: ../destination.php");
+        header("Location: ../admin/destination.php");
     } else {
         echo "Error" . mysqli_error($connect);
     }

@@ -89,31 +89,12 @@
                             <button type="submit" name="details" class="btn btn-dark">View More</button>
                         </form>
                         </div>
-                        <div class="deleteBtn">
-                        <form method="GET" action="deleteDestination.php">
-                            <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
-                            <button type="submit" name="delete" class="btn btn-danger">Delete</button>
-                        </form>
-                        <form method="GET" action="editDestination.php">
-                        <!-- Hidden input field to pass DestinationID -->
-                        <input type = "hidden" name = "DestinationID" value = "' . $destination['DestinationID'] . '">
-                        <!-- Button to submit the form -->
-                        <button type="submit" name="updateDestination" class="btn btn-primary">Update</button>
-                        </form>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>';
         }
         echo '</div>'; // Close the grid layout
-        // Button to add more attractions
-        echo '
-        <div class=button-align>
-        <form method="GET" action="newdestination.php">
-        <button type="submit" name="addDestination" class="btn btn-dark add-more">Add More</button>
-        </form>
-        </div>';
         ?>
     </div> <!-- Close the main container -->
 </body>
