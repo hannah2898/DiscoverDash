@@ -1,7 +1,7 @@
 <?php
 $DestinationID = $_GET['DestinationID'];
 $AttractionID = $_GET['AttractionID'];
-include("./includes/connect.php");
+include("../includes/connect.php");
 $query = "SELECT * FROM attractions WHERE `AttractionID` = '$AttractionID'";
 $attractions = mysqli_query($connect, $query);
 $result = $attractions->fetch_assoc();
@@ -31,12 +31,12 @@ $destinations = mysqli_query($connect, $queryforDestination);
 
         <div class="row">
             <div class="col">
-                <form method="POST" action="includes/updateAttraction.php">
+                <form method="POST" action="../includes/updateAttraction.php">
                     <!--name is important, it should be the same as updateDestination.php -->
                     <input type="hidden" name="AttractionID" value="<?php echo $result['AttractionID']; ?>">
                     <div class="mb-3">
                         <label for="DestinationID" class="form-label">Destination</label>
-                        <select name="DestinationID" id="DestinationID">
+                        <select name="DestinationID" id="DestinationID" class="form-control">
                             <?php foreach ($destinations as $destination): ?>
                                 <option value="<?php echo $destination['DestinationID']; ?>" 
                                     <?php if ($destination['DestinationID'] == $result['DestinationID']): ?>

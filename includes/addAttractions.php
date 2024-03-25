@@ -1,6 +1,6 @@
 <?php
 // Check if the form for adding new attractions is submitted
-if (isset($_POST['newAttractions'])) {
+if (isset ($_POST['newAttractions'])) {
     // Retrieve data from the form
     $DestinationID = $_POST['DestinationID'];
     $Name = $_POST['Name'];
@@ -11,7 +11,7 @@ if (isset($_POST['newAttractions'])) {
     $ImageURL = $_POST['ImageURL'];
 
     // Connection string
-    include('../includes/connect.php');
+    include ('./connect.php');
 
     // SQL query to insert new attraction into the database
     $query = "INSERT INTO attractions (DestinationID, Name, Description, Location, AdmissionFee, OpeningHours, ImageURL) VALUES ('$DestinationID', '$Name', '$Description', '$Location', '$AdmissionFee', '$OpeningHours', '$ImageURL')";
@@ -22,7 +22,7 @@ if (isset($_POST['newAttractions'])) {
     // Check if the query was successful
     if ($attraction) {
         // Redirect to the destination details page with the DestinationID in the URL
-        header("Location: ../destinationDetails.php?DestinationID=" . $DestinationID);
+        header("Location: ../admin/destinationDetails.php?DestinationID=" . $DestinationID);
     } else {
         // Display error message if the query fails
         echo "Failed" . mysqli_error($connect);

@@ -1,6 +1,6 @@
 <?php
 $DestinationID = $_GET['DestinationID'];
-include("./includes/connect.php");
+include ("../includes/connect.php");
 $query = "SELECT * FROM destination WHERE `DestinationID` = '$DestinationID'";
 $destinations = mysqli_query($connect, $query);
 $result = $destinations->fetch_assoc();
@@ -24,7 +24,7 @@ $result = $destinations->fetch_assoc();
         </div>
         <div class="row">
             <div class="col">
-                <form method="POST" action="includes/updateDestination.php">
+                <form method="POST" action="../includes/updateDestination.php">
                     <!--name is important, it should be the same as updateDestination.php -->
                     <input type="hidden" name="DestinationID" value="<?php echo $result['DestinationID']; ?>">
                     <div class="mb-3">

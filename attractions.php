@@ -79,22 +79,6 @@
                         <p class="card-text"><strong>Opening Hours:</strong> ' . $attraction['OpeningHours'] . '</p>
                         <p class="card-text"><strong>Admission Fee:</strong> $' . $attraction['AdmissionFee'] . '</p>
                     </div>
-                   
-                    <div class="deleteBtn">
-                        <form method="GET" action="deleteAttraction.php">
-                            <input type = "hidden" name = "AttractionID" value = "' . $attraction['AttractionID'] . '">
-                            <button type="submit" name="deleteAttraction" class="btn btn-danger">Delete</button>
-                        </form>
-                    </div>
-                    <div class="card footer">
-                       <form method="GET" action="editAttraction.php">
-                          <!-- Hidden input field to pass DestinationID -->
-                          <input type = "hidden" name = "AttractionID" value = "' . $attraction['AttractionID'] . '">
-                          <input type = "hidden" name = "DestinationID" value = "' . $attraction['DestinationID'] . '">
-                          <!-- Button to submit the form -->
-                          <button type="submit" name="updateAttraction" class="btn btn-primary">Update</button>
-                       </form>
-                    </div>
                 </div>
             </div>';
         }
